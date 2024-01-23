@@ -1,0 +1,25 @@
+<div class="show-container">
+  <h1>Student Details</h1>
+  <table>
+    <tr>
+      <td>Name:</td>
+      <td><%= @student.name %></td>
+    </tr>
+    <tr>
+      <td>Email:</td>
+      <td><%= @student.email %></td>
+    </tr>
+    <tr>
+      <td>Fees Status:</td>
+      <td><%= @student.fees_status %></td>
+    </tr>
+    <tr>
+      <td>Eligible for Exam:</td>
+      <td><%= @student.eligiable_for_exam %></td>
+    </tr>
+    <tr>
+      <td>Marks:</td>
+      <td><%= @student.marks? ? @student.marks : 'nil' %></td>
+    </tr>
+  </table>
+</div>

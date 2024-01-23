@@ -1,0 +1,35 @@
+<%= form_with model: @student, html: { class: 'student-form' } do |std| %>
+  <div class="form-group">
+    <%= std.label :name, "Name" %>
+    <%= std.text_field :name, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= std.label :email, "Email" %>
+    <%= std.text_field :email, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= std.label :enroll_number, "Enroll Number" %>
+    <%= std.text_field :enroll_number, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= std.label :fees_status, "Fees Status" %>
+    <%= std.check_box :fees_status, class: 'form-check-input' %>
+  </div>
+
+  <div class="form-group">
+    <%= std.label :eligiable_for_exam, "Eligible for Exam" %>
+    <%= std.check_box :eligiable_for_exam, class: 'form-check-input' %>
+  </div>
+
+  <div class="form-group">
+    <%= std.label :marks, "Marks" %>
+    <%= std.text_field :marks, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= std.submit class: 'btn btn-primary' %>
+  </div>
+<% end %>

@@ -1,0 +1,19 @@
+.show-container {
+  text-align: center;
+  margin: 50px auto;
+}
+
+h1 {
+  color: #007bff;
+}
+
+table {
+  width: 50%;
+  margin: 20px auto;
+  border-collapse: collapse;
+}
+
+td {
+  padding: 10px;
+  border: 1px solid #ddd;
+}

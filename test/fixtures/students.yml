@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  email: MyString
+  enroll_number: MyString
+  fees_status: false
+  eligiable_for_exam: false
+  marks: MyString
+
+two:
+  name: MyString
+  email: MyString
+  enroll_number: MyString
+  fees_status: false
+  eligiable_for_exam: false
+  marks: MyString

@@ -1,0 +1,36 @@
+<%= link_to "Create new student", new_student_path %>
+
+<% if @students.empty? %>
+  <h1>No Students</h1>
+<% else %>
+  <table>
+    <tr>
+      <th>Enroller</th>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Barcode</th>
+      <th>Actions</th>
+    </tr>
+    <% @students.each do |std| %>
+      <tr>
+        <td><%= link_to std.enroll_number, student_path(std.id) %></td>
+        <td><%= std.name %></td>
+        <td><%= std.email %></td>
+        <td>
+          <div style="display: flex; flex-direction: column;">
+            <% if std.barcode.attached? %>
+              <%= image_tag std.barcode, alt: "Barcode" %>
+              <span><%= std.barcode.blob.filename %></span>
+            <% else %>
+              <p>You are not eligible</p>
+            <% end %>
+          </div>
+        </td>
+        <td class="actions">
+          <%= link_to '🖊', edit_student_path(std) %>
+          <%= link_to '🚮', student_path(std), data: {turbo_method: :delete, turbo_confirm: 'Are you sure?' } %>
+        </td>
+      </tr>
+    <% end %>
+  </table>
+<% end %>
